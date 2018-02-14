@@ -1,0 +1,56 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - node_modules/**/*
+    - bin/**/*
+  TargetRubyVersion: 2.5.0
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Rails:
+  Enabled: true
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+    - config/routes.rb
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 1500
+
+Rails/SkipsModelValidations:
+  Blacklist:
+    - decrement!
+    - decrement_counter
+    - increment!
+    - increment_counter
+    - toggle!
+    - update_all
+    - update_attribute
+    - update_column
+    - update_columns
+    - update_counters
